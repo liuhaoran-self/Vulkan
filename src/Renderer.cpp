@@ -1,4 +1,4 @@
-#include "Renderer.h"
+#include "Renderer.hpp"
 
 #include <iostream>
 
@@ -77,6 +77,7 @@ std::vector<const char *> Renderer::getRequiredLayers() {
 std::vector<const char *> Renderer::getRequiredExtensions() {
     auto extensions = std::vector<const char *>{
             "VK_KHR_surface",
+			"VK_KHR_win32_surface",
     };
 
     int32_t count = 0;

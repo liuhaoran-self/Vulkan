@@ -1,6 +1,8 @@
 #pragma once
 
-#include "Renderer.h"
+#include "surface.hpp"
+
+#include "Renderer.hpp"
 
 #include <QVulkanWindow>
 #include <QWindow>

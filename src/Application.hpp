@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-#include "MainWindow.h"
+#include "MainWindow.hpp"
 
 #include <QApplication>
 

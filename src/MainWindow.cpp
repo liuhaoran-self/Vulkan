@@ -1,6 +1,5 @@
-#include "MainWindow.h"
+#include "MainWindow.hpp"
 
-#include <iostream>
 
 MainWindow::MainWindow(QWindow *parent)
         : QWindow(parent),
@@ -9,7 +8,8 @@ MainWindow::MainWindow(QWindow *parent)
     //setIcon(QIcon(":/VulkanDemo/app.ico"));
     //QWindow::vulkanInstance()->create();
     setSurfaceType(VulkanSurface);
-    std::cout << this->surfaceType() << '\n';
+	renderer.setSurface(
+			surfaceForWindow(*this, renderer.instance));
 }
 
 void MainWindow::showEvent(QShowEvent *show_event) {

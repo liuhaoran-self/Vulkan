@@ -16,10 +16,11 @@ find_package(Qt6 COMPONENTS
 
 link_directories(C:/VulkanSDK/1.3.211.0/Lib)
 
-add_executable(Vulkan src/main.cpp src/debug.h
-        src/Application.cpp src/Application.h
-        src/MainWindow.cpp src/MainWindow.h
-        src/Renderer.cpp src/Renderer.h)
+add_executable(Vulkan src/main.cpp src/debug.hpp
+        src/Application.cpp src/Application.hpp
+        src/MainWindow.cpp src/MainWindow.hpp
+        src/Renderer.cpp src/Renderer.hpp
+        src/surface.hpp)
 target_link_libraries(Vulkan
         vulkan-1
         Qt::Core

@@ -1,17 +1,15 @@
 #pragma once
 
-#include "debug.h"
+#include "debug.hpp"
 
 #include <vulkan/vulkan.hpp>
 #include <iostream>
 #include <thread>
-#include <windows.h>//Not for long
 
 class Renderer {
     vk::SurfaceKHR surface;
     vk::PhysicalDevice physicalDevice;
     vk::DispatchLoaderDynamic dld;
-    vk::Instance instance;
     int64_t lastTime;
     int32_t currentFps;
 
@@ -34,7 +32,8 @@ public:
 
     inline void setSurface(vk::SurfaceKHR s);
 
-    bool window_should_close;
+	vk::Instance instance;
+	bool window_should_close;
 };
 
 void Renderer::setSurface(vk::SurfaceKHR s) {
